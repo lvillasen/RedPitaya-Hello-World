@@ -1,5 +1,5 @@
 # RedPitayaHelloWorldVHDL
-Hello World code in VHDL for the Red Pitaya board
+Hello World code in VHDL for the RedPitaya board
 
 Luis Villaseñor
 
