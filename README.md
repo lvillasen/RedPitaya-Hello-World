@@ -11,11 +11,13 @@ Updated: 2022-08-13
 
 # Usage
 
+Clone the repositiry
+
 Create a new project with Vivado (tested with Vivado v2019.1) 
 
 see https://www.xilinx.com/support/download.html
 
-Add the vrilog and the xdc files provides according to the block design shown in the screenshot provided. 
+Add the verilog (.v) and the constraints (.xdc) files from the repository according to the block design shown in the screenshot provided. 
 
 Proceed to run Synthesis, Implementation and Bitstream Generation
 
