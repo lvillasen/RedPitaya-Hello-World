@@ -17,15 +17,21 @@ Create a new project with Vivado (tested with Vivado v2019.1)
 
 see https://www.xilinx.com/support/download.html
 
+Select the device xc7z010clg400-1 
+
 Add the verilog (.v) and the constraints (.xdc) files from the repository according to the block design shown in the screenshot provided. 
+
+In 'Sources' go to 'IP Sources' right-click on 'project1' and select 'Create HDL Wraper'
 
 Proceed to run Synthesis, Implementation and Bitstream Generation
 
 Find the bitstream file (you may use the command 'find . -name *bit')
 
-Transfer the bitstream file generated (*.bit)  to the Red Pitaya (you may use sftp root@rp-ip) type
+Transfer the bitstream file generated (*.bit)  to the Red Pitaya (you may use sftp root@rp-ip, put *.bit)
 
-cat file_name.bit > /dev/xdevcfg
+Connect to the RedPitaya (ssh root@rp-ip)
+
+Program the FPGA (cat file_name.bit > /dev/xdevcfg)
 
 The 8-bit LEDs will display a binary incremental counter at a rate of 1Hz
 
