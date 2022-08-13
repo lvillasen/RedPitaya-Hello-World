@@ -1,9 +1,7 @@
-# RedPitayaHelloWorldVHDL
-Hello World code in VHDL for the RedPitaya board
+# RedPitaya-Hello-World
+Simple project for the RedPitaya board that illustrates the use of standard IPs from Vivado in combination with a module written in Verilog
 
-Luis Villaseñor
 
-License: GPLv3
 
 Date: 2016-03-11
 
