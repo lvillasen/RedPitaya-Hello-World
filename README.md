@@ -15,7 +15,12 @@ Simple projects for the RedPitaya board that illustrate the use of standard IPs 
 
 - Add the constraint *redpitaya.xdc* and verilog *counter.c*  files from the repository.
 
-- Create a new Block Design according to the block shown in Fig. 1.Binary_Counter. Add the IP called *ZYNQ7 Processing System* from the menu and *Run Block Automation* with default options. Add Module counter.v from the menu. Add a Binary Counter from thr *Add IP* menu. Add a port called led_o  with components from 7 down to 0.
+- Create a new Block Design according to the following instructions to creat a block diagram similar to Fig. 1.Binary_Counter. 
+- Add the IP called *ZYNQ7 Processing System* from the menu and *Run Block Automation* with default options. 
+- Add Module counter.v from the menu. 
+- Add a Binary Counter from thr *Add IP* menu. 
+- Add a port called led_o  with components from 7 down to 0.
+- From the menu click on *Validate Design*
 
 - In 'Sources' go to 'IP Sources' right-click on 'project1' and select 'Create HDL Wraper'
 
