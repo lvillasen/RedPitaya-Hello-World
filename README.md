@@ -51,7 +51,7 @@ Updated: 2022-08-13
 
 - Add the constraint *Hello-World.xdc* and verilog *counter.c*  files from the repository.
 
-- Create a new Block Design according to the block shown in the Fig. 1. 
+- Create a new Block Design according to the block shown in Fig. 1 Binary_Counter. 
 
 - Add the IP called *ZYNQ7 Processing System* from the menu and *Run Block Automation* with default options
 
