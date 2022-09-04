@@ -77,8 +77,14 @@ Simple projects for the RedPitaya board that illustrate the use of standard IPs 
 - Connect to the RedPitaya (*ssh root@rp-ip*)
 
 - Program the FPGA with the command *cat file_name.bit > /dev/xdevcfg*
-- Now we read the baseline of the ADC-a by using the command line on the RedPitaya 
+- Now we read the baseline of the ADC-a by using the command line on the RedPitaya using the base address of the AXI_GPIO bus
+
 ``` monitor 0x41200008 ```
+In my case I get 0x00002067
+
+Next you can set the treshold a few adc counts from the baseline voltage and you should see the LEDs display the number of trigger signals out of the fluctuations of the baseline.
+``` monitor 0x41200008 0x2060```
+
 
 
 
