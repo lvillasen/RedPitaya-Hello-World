@@ -52,7 +52,7 @@ Simple projects for the RedPitaya board that illustrate the use of standard IPs 
 
 - Add the constraint *redpitaya.xdc* and verilog *trigger.c*  files from the repository.
 
-- Create a new Block Design according to the block shown in Fig. 2.Trigger_Counter. 
+- Create a new Block Design according to the block diagram shown in Fig. 2.Trigger_Counter.png by following the following steps. 
 
 -  Add the IP called *ZYNQ7 Processing System* from the menu and *Run Block Automation* with default options. 
 -  Add the IP called *AXI GPIO*. Enable *Dual Channel* and set GPIO 2 to *All Inputs* with a width of 14 as shown in Fig. 2.AXI_GPIO.png.
