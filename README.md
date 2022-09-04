@@ -1,12 +1,8 @@
 # RedPitaya-Hello-World
 
+Simple projects for the RedPitaya board that illustrate the use of standard IPs from Vivado in combination with modules written in Verilog.
+
 ## 1. Binary Counter Displayed on the LEDs
-
-Simple project for the RedPitaya board that illustrates the use of standard IPs from Vivado in combination with a module written in Verilog
-
-Date: 2016-03-11
-
-Updated: 2022-08-13
 
 
 ### Usage
