@@ -55,7 +55,7 @@ Simple projects for the RedPitaya board that illustrate the use of standard IPs 
 - Create a new Block Design according to the block shown in Fig. 2.Trigger_Counter. 
 
 -  Add the IP called *ZYNQ7 Processing System* from the menu and *Run Block Automation* with default options. 
--  Add the IP called *AXI GPIO*. Enable *Dual Channel* and set GPIO 2 to *All Inputs* as shown in Fig. 2.AXI_GPIO.png. 
+-  Add the IP called *AXI GPIO*. Enable *Dual Channel* and set GPIO 2 to *All Inputs* with a width of as shown in Fig. 2.AXI_GPIO.png. 
 -  Run *Connection Automation* withh all options selected. Delete the *gpio-RTL_0* and *gpio-RTL_1* ports. to obtain the diagram shown in Fig. 2.AXI_GPIO_Diagram.png. 
 -  From the menu Add Module add trigger. 
 -  From the Add IP menu add *Utility Buffer* and rigth-click on the plus sign to display the differential IBUF_DS_P and IBUF_DS_N inputs. 
