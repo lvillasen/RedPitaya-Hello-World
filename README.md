@@ -1,4 +1,6 @@
 # RedPitaya-Hello-World
+
+## 1. Counter with output to LEDs
 Simple project for the RedPitaya board that illustrates the use of standard IPs from Vivado in combination with a module written in Verilog
 
 
@@ -11,31 +13,30 @@ Updated: 2022-08-13
 
 # Usage
 
-Clone the repositiry
+- Clone the repositiry
 
-Create a new project with Vivado (tested with Vivado v2019.1) 
+- Create a new project with Vivado (tested with Vivado v2019.1) see https://www.xilinx.com/support/download.html
 
-see https://www.xilinx.com/support/download.html
+- Select the device xc7z010clg400-1 
 
-Select the device xc7z010clg400-1 
+- Add the constraint *Hello-World.xdc* and verilog *counter.c*  files from the repository.
 
-Add the verilog (.v) and the constraints (.xdc) files from the repository according to the block design shown in the screenshot provided. 
+- Create a new block design according to the block shown in the Fig. 1. 
 
-In 'Sources' go to 'IP Sources' right-click on 'project1' and select 'Create HDL Wraper'
+- In 'Sources' go to 'IP Sources' right-click on 'project1' and select 'Create HDL Wraper'
 
-Proceed to run Synthesis, Implementation and Bitstream Generation
+- Proceed to run Synthesis, Implementation and Bitstream Generation
 
-Find the bitstream file (you may use the command 'find . -name *bit')
+- Find the bitstream file (you may use the command 'find . -name *bit')
 
-Transfer the bitstream file generated (*.bit)  to the Red Pitaya (you may use sftp root@rp-ip, put *.bit)
+- Transfer the bitstream file generated (*.bit)  to the Red Pitaya (you may use sftp root@rp-ip and put *.bit)
 
-Connect to the RedPitaya (ssh root@rp-ip)
+- Connect to the RedPitaya (ssh root@rp-ip)
 
-Program the FPGA (cat file_name.bit > /dev/xdevcfg)
+- Program the FPGA (cat file_name.bit > /dev/xdevcfg)
 
-The 8-bit LEDs will display a binary incremental counter at a rate of 1Hz
+- The 8-bit LEDs will display a binary incremental counter at a rate of 1Hz
 
-You may change the clock rate by editing the verilog counter module provided.
+- You may change the clock rate by editing the verilog counter.v code.
 
-Reboot the Red Pitaya board to reinstall the permanent bitstream on the Zynq FPGA
-
+- Reboot the Red Pitaya board to reinstall the permanent bitstream on the Zynq FPGA
