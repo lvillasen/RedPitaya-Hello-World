@@ -79,13 +79,18 @@ Simple projects for the RedPitaya board that illustrate the use of standard IPs 
 Now we read the baseline of the ADC-a by using the command line on the RedPitaya using the base address of the AXI_GPIO bus
 
 ``` monitor 0x41200008 ```
+
 In my case I get 0x00002067
 
-Next you can set the treshold a few adc counts from the baseline voltage 
+Next you can set the treshold a few adc counts from the baseline voltage, i.e., 
 
 ``` monitor 0x41200000 0x2060```
 
 You should see the LEDs display in binary the number of trigger signals due to small fluctuations of the baseline.
+
+If you have a signal generator you can set the treshold accodingly. 
+
+You can add hysteresis to get more reliable trigger counts.
 
 - Reboot the RedPitaya board or *cat fpga_0.94.bit > /dev/xdevcfg* to reinstall the official bitstream on the Zynq FPGA.
 
