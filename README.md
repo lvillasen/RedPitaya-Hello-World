@@ -19,7 +19,7 @@ Updated: 2022-08-13
 
 - Add the constraint *Hello-World.xdc* and verilog *counter.c*  files from the repository.
 
-- Create a new Block Design according to the block shown in Block_Design.png. Add the IP called *ZYNQ7 Processing System* from the menu and *Run Block Automation* with default options. Add Module counter.v from the menu. Add a Binary Counter from thr *Add IP* menu. Add a port called led_o  with components from 7 down to 0.
+- Create a new Block Design according to the block shown in Fig. 1.Binary_Counter. Add the IP called *ZYNQ7 Processing System* from the menu and *Run Block Automation* with default options. Add Module counter.v from the menu. Add a Binary Counter from thr *Add IP* menu. Add a port called led_o  with components from 7 down to 0.
 
 - In 'Sources' go to 'IP Sources' right-click on 'project1' and select 'Create HDL Wraper'
 
@@ -49,9 +49,10 @@ Updated: 2022-08-13
 
 - Select the device xc7z010clg400-1 
 
-- Add the constraint *Hello-World.xdc* and verilog *counter.c*  files from the repository.
+- Add the constraint *Hello-World.xdc* and verilog *trigg
+- ]\\\\\\\\\\\\\\er.c*  files from the repository.
 
-- Create a new Block Design according to the block shown in Fig. 1 Binary_Counter. 
+- Create a new Block Design according to the block shown in Fig. 2.Trigger_Counter. 
 
 - Add the IP called *ZYNQ7 Processing System* from the menu and *Run Block Automation* with default options
 
