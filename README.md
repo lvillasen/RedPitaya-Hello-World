@@ -38,7 +38,7 @@ Simple projects for the RedPitaya board that illustrate the use of standard IPs 
 
 - You may change the clock rate by editing the verilog *counter.v* code.
 
-- Reboot the Red Pitaya board to reinstall the permanent bitstream on the Zynq FPGA
+- Reboot the RedPitaya board or *cat fpga_0.94.bit > /dev/xdevcfg*to reinstall the official bitstream on the Zynq FPGA.
 
 ## 2. Trigger Counter Displayed on the LEDs
 
@@ -60,6 +60,10 @@ Simple projects for the RedPitaya board that illustrate the use of standard IPs 
 -  From the menu Add Module add trigger. 
 -  From the Add IP menu add *Utility Buffer* and rigth-click on the plus sign to display the differential IBUF_DS_P and IBUF_DS_N inputs. 
 -  From the *Create Port* menu add the 3 input ports shown in Fig. 2.Trigger.png. and make the wire connections shown.
+-  From the *Add IP* menu add a Binary Counter and enable CE and SCLR as shown.
+-  From the *Add IP* menu add 3 Slices and configure according to Figs. 3.Slice_CE.png, 3,Slice_SCLR.png and 3.Slice_Treshold.png.
+- Finally, wire as shown in Fig.2.Trigger_Counter.png.
+- From the menu click on *Validate Design*
 
 - In 'Sources' go to 'IP Sources' right-click on 'project1' and select 'Create HDL Wraper'
 
@@ -77,6 +81,6 @@ Simple projects for the RedPitaya board that illustrate the use of standard IPs 
 
 - You may change the clock rate by editing the verilog *counter.v* code.
 
-- Reboot the Red Pitaya board to reinstall the permanent bitstream on the Zynq FPGA
+- Reboot the RedPitaya board or *cat fpga_0.94.bit > /dev/xdevcfg*to reinstall the official bitstream on the Zynq FPGA.
 
-- 
+
