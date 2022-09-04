@@ -63,19 +63,24 @@ Simple projects for the RedPitaya board that illustrate the use of standard IPs 
 -  From the *Add IP* menu add a Binary Counter and enable CE and SCLR as shown.
 -  From the *Add IP* menu add 3 Slices and configure according to Figs. 3.Slice_CE.png, 3,Slice_SCLR.png and 3.Slice_Treshold.png.
 - Finally, wire as shown in Fig.2.Trigger_Counter.png.
+- Note that the base address for the AXI_GPIO is 0x4120_0000, as shown in Fig. 2.Address_Editor.png. We will use this number to communicate to the PL from the PS.
 - From the menu click on *Validate Design*
 
 - In 'Sources' go to 'IP Sources' right-click on 'project1' and select 'Create HDL Wraper'
 
 - Proceed to run Synthesis, Implementation and Bitstream Generation
 
-- Find the bitstream file generated (you may use the command 'find . -name *bit')
+- Find the bitstream file generated (it is the file with *bit' termination in the ProjectName.runs/impl_1 folder)
 
-- Transfer the bitstream file  (*.bit)  to the Red Pitaya (you may use *sftp root@rp-ip and put *.bit)
+- Transfer the bitstream file to the Red Pitaya (you may use *sftp root@rp-ip and the *put* command line)
 
 - Connect to the RedPitaya (*ssh root@rp-ip*)
 
 - Program the FPGA with the command *cat file_name.bit > /dev/xdevcfg*
+- Now we read the baseline of the ADC-a by using the command line on the RedPitaya 
+''' monitor 0x41200008 '''
+
+
 
 - The 8-bit LEDs will display a binary incremental counter at a rate of 1Hz
 
