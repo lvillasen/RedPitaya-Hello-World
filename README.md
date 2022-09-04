@@ -19,7 +19,7 @@ Updated: 2022-08-13
 
 - Add the constraint *Hello-World.xdc* and verilog *counter.c*  files from the repository.
 
-- Create a new Block Design according to the block shown in the Fig. 1. Add the IP called *ZYNQ7 Processing System* from the menu and *Run Block Automation* with default options. Add Module counter.v from the menu.
+- Create a new Block Design according to the block shown in Block_Design.png. Add the IP called *ZYNQ7 Processing System* from the menu and *Run Block Automation* with default options. Add Module counter.v from the menu. Add a Binary Counter from thr *Add IP* menu. Add a port called led_o  with components from 7 down to 0.
 
 - In 'Sources' go to 'IP Sources' right-click on 'project1' and select 'Create HDL Wraper'
 
@@ -27,12 +27,12 @@ Updated: 2022-08-13
 
 - Find the bitstream file (you may use the command 'find . -name *bit')
 
-- Transfer the bitstream file generated (*.bit)  to the Red Pitaya (you may use *sftp root@rp-ip and put *.bit)
+- Transfer the bitstream file (*.bit)  to the Red Pitaya (you may use *sftp root@rp-ip and put *.bit)
 
 - Connect to the RedPitaya (*ssh root@rp-ip*)
 
 - Program the FPGA with the command *cat file_name.bit > /dev/xdevcfg*
-*
+
 - The 8-bit LEDs will display a binary incremental counter at a rate of 1Hz
 
 - You may change the clock rate by editing the verilog *counter.v* code.
