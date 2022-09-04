@@ -11,7 +11,7 @@ Updated: 2022-08-13
 
 
 
-# Usage
+### Usage
 
 - Clone the repositiry
 
@@ -29,14 +29,14 @@ Updated: 2022-08-13
 
 - Find the bitstream file (you may use the command 'find . -name *bit')
 
-- Transfer the bitstream file generated (*.bit)  to the Red Pitaya (you may use sftp root@rp-ip and put *.bit)
+- Transfer the bitstream file generated (*.bit)  to the Red Pitaya (you may use *sftp root@rp-ip and put *.bit)
 
-- Connect to the RedPitaya (ssh root@rp-ip)
+- Connect to the RedPitaya (*ssh root@rp-ip*)
 
-- Program the FPGA (cat file_name.bit > /dev/xdevcfg)
-
+- Program the FPGA with the command *cat file_name.bit > /dev/xdevcfg*
+*
 - The 8-bit LEDs will display a binary incremental counter at a rate of 1Hz
 
-- You may change the clock rate by editing the verilog counter.v code.
+- You may change the clock rate by editing the verilog *counter.v* code.
 
 - Reboot the Red Pitaya board to reinstall the permanent bitstream on the Zynq FPGA
