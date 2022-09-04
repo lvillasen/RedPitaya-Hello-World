@@ -78,7 +78,7 @@ Simple projects for the RedPitaya board that illustrate the use of standard IPs 
 
 - Program the FPGA with the command *cat file_name.bit > /dev/xdevcfg*
 - Now we read the baseline of the ADC-a by using the command line on the RedPitaya 
-' monitor 0x41200008 '
+``` monitor 0x41200008 ```
 
 
 
