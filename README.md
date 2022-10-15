@@ -1,7 +1,13 @@
 # RedPitaya-Hello-World
 
 Simple projects for the RedPitaya board that illustrate the use of standard IPs from Vivado in combination with modules written in Verilog. Tested with Vivado v2019.1, see https://www.xilinx.com/support/download.html.
+It includes 3 simple projects:
 
+- 1. Binary Counter Displayed on the LEDs
+
+- 2. Trigger Counter Displayed on the LEDs
+
+- 3. Arbitrary Signal on Channel 1 of Fast DAC
 
 ## 1. Binary Counter Displayed on the LEDs
 
@@ -132,6 +138,8 @@ You can add hysteresis to get more reliable trigger counts.
 - Program the FPGA with the command *cat file_name.bit > /dev/xdevcfg*
 
 - Use the Jupyter-Notebook called DAC-ASG.ipynb provided to load an arbitrary waveform and to send it to channel 1 of the fast DAC.
+
+- To see the signal you need an oscilloscope or arternatively use acquisition program included in https://github.com/lvillasen/RedPitaya-Muon-Decay
 
 - Reboot the RedPitaya board or *cat fpga_0.94.bit > /dev/xdevcfg* to reinstall the official bitstream on the Zynq FPGA.
 
