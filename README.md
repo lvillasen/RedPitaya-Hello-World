@@ -14,7 +14,7 @@ Simple projects for the RedPitaya board that illustrate the use of standard IPs 
 
 - Select the device xc7z010clg400-1 
 
-- Add the constraint *redpitaya.xdc* and verilog *counter.c*  files from the repository.
+- Add the constraint *redpitaya.xdc* and verilog *counter.v*  files from the repository.
 
 - Create a new Block Design according to the following instructions to creat a block diagram similar to Fig. 1.Binary_Counter. 
 - Add the IP called *ZYNQ7 Processing System* from the menu and *Run Block Automation* with default options. 
@@ -51,7 +51,7 @@ Simple projects for the RedPitaya board that illustrate the use of standard IPs 
 
 - Select the device xc7z010clg400-1 
 
-- Add the constraint *redpitaya.xdc* and verilog *trigger.c*  files from the repository.
+- Add the constraint *redpitaya.xdc* and verilog *trigger.v*  files from the repository.
 
 - Create a new Block Design according to the block diagram shown in Fig. 2.Trigger_Counter.png by following the following steps. 
 
@@ -94,4 +94,45 @@ If you have a signal generator you can set the treshold accodingly.
 You can add hysteresis to get more reliable trigger counts.
 
 - Reboot the RedPitaya board or *cat fpga_0.94.bit > /dev/xdevcfg* to reinstall the official bitstream on the Zynq FPGA.
+
+## 3. Arbitrary Signal on Channel 1 of Fast DAC
+
+### Usage
+
+- Clone the repositiry
+
+- Create a new project with Vivado (tested with Vivado v2019.1) see https://www.xilinx.com/support/download.html
+
+- Select the device xc7z010clg400-1 
+
+- Add the constraint *redpitaya.xdc* and verilog *dual_port_ram_dac.v*  files from the repository.
+
+- Create a new Block Design according to the block diagram shown in Fig. 3.DAC-ASG.png by following the following steps. 
+
+-  Add the IP called *ZYNQ7 Processing System* from the menu and *Run Block Automation* with default options. 
+-  Add the IP called *AXI GPIO*. Enable *Dual Channel* and set GPIO 2 to *All Inputs* with a width of 14 as shown in Fig. 2.AXI_GPIO.png.
+-  Run *Connection Automation* with all options selected. Delete the *gpio-RTL_0* and *gpio-RTL_1* ports. 
+-  From the menu Add Module add *trigger*. 
+-  From the Add IP menu add *Utility Buffer* and rigth-click on the plus sign to display the differential IBUF_DS_P and IBUF_DS_N inputs. 
+-  From the *Create Port* menu add the 3 input ports and the led_o output shown in Fig. 2.Trigger_Counter.png. and make the wire connections shown.
+
+- Note that the base address for the AXI_GPIO is 0x4120_0000. We will use this number to communicate to the PL from the PS.
+- From the menu click on *Validate Design*
+
+- In 'Sources' go to 'IP Sources' right-click on 'project1' and select 'Create HDL Wraper'
+
+- Proceed to run Synthesis, Implementation and Bitstream Generation
+
+- Find the bitstream file generated (it is the file with *bit' termination in the ProjectName.runs/impl_1 folder)
+
+- Transfer the bitstream file to the Red Pitaya (you may use *sftp root@rp-ip and the *put* command line)
+
+- Connect to the RedPitaya (*ssh root@rp-ip*)
+
+- Program the FPGA with the command *cat file_name.bit > /dev/xdevcfg*
+
+- Use the Jupyter-Notebook called DAC-ASG.ipynb provided to load an arbitrary waveform and to send it to channel 1 of the fast DAC.
+
+- Reboot the RedPitaya board or *cat fpga_0.94.bit > /dev/xdevcfg* to reinstall the official bitstream on the Zynq FPGA.
+
 
