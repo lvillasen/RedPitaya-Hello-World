@@ -139,7 +139,7 @@ You can add hysteresis to get more reliable trigger counts.
 
 - Use the Jupyter-Notebook called DAC-ASG.ipynb provided to load an arbitrary waveform and to send it to channel 1 of the fast DAC.
 
-- To see the signal you need an oscilloscope, or, arternatively, use the acquisition program included in https://github.com/lvillasen/RedPitaya-Muon-Decay which generates a signal with the channel 1 of the fast DAC and acquires it with channel 1 of the fast ADC.
+- To see the signal you need an oscilloscope, or, arternatively, use the acquisition program included in https://github.com/lvillasen/RedPitaya-Muon-Decay which generates a signal with on channel 1 of the fast DAC and acquires it with channel 1 of the fast ADC.
 
 - Reboot the RedPitaya board or *cat fpga_0.94.bit > /dev/xdevcfg* to reinstall the official bitstream on the Zynq FPGA.
 
