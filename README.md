@@ -113,12 +113,12 @@ You can add hysteresis to get more reliable trigger counts.
 
 - Add the constraint *redpitaya.xdc* and verilog *dual_port_ram_dac.v*  files from the repository.
 
-- Create a new Block Design according to the block diagram shown in Fig. 3.DAC-ASG.png by following the following steps. 
+- Create a new Block Design according to the block diagram shown in Fig. 3.DAC-Arbitrary-Signal-Generator.png by following the following steps. 
 
 -  Add the IP called *ZYNQ7 Processing System* from the menu and *Run Block Automation* with default options. 
--  Add the IP called *AXI GPIO*. Enable *Dual Channel* and set GPIO 2 to *All Inputs* with a width of 14 as shown in Fig. 2.AXI_GPIO.png.
+-  Add the IP called *AXI GPIO*. Set it as shown in Fig. 3.GPIO_0.png.
 -  Run *Connection Automation* with all options selected. Delete the *gpio-RTL_0* and *gpio-RTL_1* ports. 
--  From the menu Add Module add *trigger*. 
+-  From the menu Add Module add *dual_port_ram_dac*. 
 -  From the Add IP menu add *Utility Buffer* and rigth-click on the plus sign to display the differential IBUF_DS_P and IBUF_DS_N inputs. 
 -  From the *Create Port* menu add the 3 input ports and the led_o output shown in Fig. 2.Trigger_Counter.png. and make the wire connections shown.
 
@@ -135,7 +135,7 @@ You can add hysteresis to get more reliable trigger counts.
 
 - Connect to the RedPitaya (*ssh root@rp-ip*)
 
-- Program the FPGA with the command *cat file_name.bit > /dev/xdevcfg*
+- Program the FPGA with the command *cat file_name.bit > /dev/xdevcfg* or use the bit file provided: *cat DAC-ASG.bit > /dev/xdevcfg* 
 
 - Use the Jupyter-Notebook called DAC-ASG.ipynb provided to load an arbitrary waveform and to send it to channel 1 of the fast DAC.
 
