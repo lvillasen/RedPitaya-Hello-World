@@ -1,7 +1,7 @@
 # RedPitaya-Hello-World
 
 Simple projects for the RedPitaya board that illustrate the use of standard IPs from Vivado in combination with modules written in Verilog. Tested with Vivado v2019.1, see https://www.xilinx.com/support/download.html.
-It includes 3 simple projects:
+It includes 4 simple projects:
 
 - 1. Binary Counter Displayed on the LEDs
 
