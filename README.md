@@ -9,6 +9,8 @@ It includes 3 simple projects:
 
 - 3. Arbitrary Signal on Channel 1 of Fast DAC
 
+- 4. ADC with nth threshold trigger
+
 ## 1. Binary Counter Displayed on the LEDs
 
 
@@ -140,6 +142,24 @@ You can add hysteresis to get more reliable trigger counts.
 - Use the Jupyter-Notebook called DAC-ASG.ipynb provided to load an arbitrary waveform and to send it to channel 1 of the fast DAC.
 
 - To see the signal you need an oscilloscope, or, arternatively, use the acquisition program included in https://github.com/lvillasen/RedPitaya-Muon-Decay which generates a signal on channel 1 of the fast DAC and acquires it with channel 1 of the fast ADC.
+
+- Reboot the RedPitaya board or *cat fpga_0.94.bit > /dev/xdevcfg* to reinstall the official bitstream on the Zynq FPGA.
+
+## 4. ADC with nth threshold trigger
+
+### Usage
+
+- Clone the repositiry
+
+- Create a new project with Vivado (tested with Vivado v2019.1) see https://www.xilinx.com/support/download.html
+
+- Select the device xc7z010clg400-1 
+
+- Add the constraint *redpitaya.xdc* and the required verilog files from the repository.
+
+- Compile and program the FPGA with the command *cat file_name.bit > /dev/xdevcfg* or use the bit file provided: *cat 4.DAC-ADC.bit > /dev/xdevcfg* 
+
+- Use the Jupyter-Notebook called 4.DAC-ADC.ipynb provided.
 
 - Reboot the RedPitaya board or *cat fpga_0.94.bit > /dev/xdevcfg* to reinstall the official bitstream on the Zynq FPGA.
 
