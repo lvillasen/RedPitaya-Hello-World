@@ -145,7 +145,7 @@ You can add hysteresis to get more reliable trigger counts.
 
 - Reboot the RedPitaya board or *cat fpga_0.94.bit > /dev/xdevcfg* to reinstall the official bitstream on the Zynq FPGA.
 
-## 4. ADC with nth threshold trigger
+## 4. ADC with Nth Edge Trigger
 
 ### Usage
 
