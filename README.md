@@ -47,7 +47,7 @@ It includes 4 simple projects:
 
 - You may change the clock rate by editing the verilog *counter.v* code.
 
-- Reboot the RedPitaya board or *cat fpga_0.94.bit > /dev/xdevcfg*to reinstall the official bitstream on the Zynq FPGA.
+- Reboot the RedPitaya board or *cat fpga_0.94.bit > /dev/xdevcfg* to reinstall the official bitstream on the Zynq FPGA.
 
 ## 2. Trigger Counter Displayed on the LEDs
 
