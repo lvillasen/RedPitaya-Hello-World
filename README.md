@@ -24,7 +24,7 @@ It includes 4 simple projects:
 
 - Add the constraint *redpitaya.xdc* and verilog *counter.v*  files from the repository.
 
-- Create a new Block Design according to the following instructions to creat a block diagram similar to Fig. 1.Binary_Counter. 
+- Create a new Block Design according to the following instructions to create a block diagram similar to Fig. 1.Binary_Counter. 
 - Add the IP called *ZYNQ7 Processing System* from the menu and *Run Block Automation* with default options. 
 - Add Module counter.v from the menu. 
 - Add a Binary Counter from thr *Add IP* menu. 
